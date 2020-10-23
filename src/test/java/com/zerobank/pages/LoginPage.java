@@ -1,5 +1,6 @@
 package com.zerobank.pages;
 
+import com.zerobank.utilities.ConfigurationReader;
 import com.zerobank.utilities.Driver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -25,5 +26,11 @@ public class LoginPage {
     public WebElement forgotPassword;
 
 
+    public void loginPage(){
+        Driver.get().get(ConfigurationReader.get("url"));
+        username.sendKeys("username");
+        password.sendKeys("password");
+        submit.click();
+    }
 
 }
