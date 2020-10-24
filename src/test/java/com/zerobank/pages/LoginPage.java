@@ -10,6 +10,7 @@ public class LoginPage {
     public LoginPage(){
         PageFactory.initElements(Driver.get(), this);
     }
+
     @FindBy(id = "user_login")
     public WebElement username;
     @FindBy(id = "user_password")
@@ -24,10 +25,11 @@ public class LoginPage {
     public WebElement homePage;
     @FindBy(xpath ="//a[contains(text(),'Forgot your password ?')]" )
     public WebElement forgotPassword;
+    @FindBy(xpath = "//div[contains(text(),'Login and/or password are wrong.')]")
+    public WebElement errorAlert;
 
 
     public void loginPage(){
-        Driver.get().get(ConfigurationReader.get("url"));
         username.sendKeys("username");
         password.sendKeys("password");
         submit.click();

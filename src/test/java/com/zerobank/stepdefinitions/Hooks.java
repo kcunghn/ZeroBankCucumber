@@ -1,5 +1,6 @@
 package com.zerobank.stepdefinitions;
 
+import com.zerobank.utilities.BrowserUtils;
 import com.zerobank.utilities.Driver;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
@@ -22,7 +23,7 @@ public class Hooks {
             scenario.attach(screenshot,"image/png","screenshot");
         }
 
-
+        BrowserUtils.waitFor(2);
         Driver.closeDriver();
     }
 

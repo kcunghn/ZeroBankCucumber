@@ -27,6 +27,30 @@ public class BasePage {
         PageFactory.initElements(Driver.get(),this);
     }
 
+public void navigateToModule(String menu){
 
+        switch (menu.toLowerCase()){
+            case "account summary":
+                accountSummary.click();
+                break;
+            case"account activity":
+                accountActivity.click();
+                break;
+            case "transfer funds":
+                transferFunds.click();
+                break;
+            case "pays bills":
+                payBills.click();
+                break;
+            case"my money map":
+                myMoneyMap.click();
+                break;
+            case "online statement":
+                onlineStatement.click();
+                break;
+        }
+
+
+}
 
 }
