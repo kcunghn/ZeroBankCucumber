@@ -75,4 +75,9 @@ public class LoginStepDef {
     }
 
 
+    @Given("the user is logged in")
+    public void theUserIsLoggedIn() {
+        LoginPage loginPage = new LoginPage();
+        loginPage.loginPage();
+    }
 }

@@ -23,17 +23,17 @@ public class BasePage {
     @FindBy(xpath = "//ul[@class='nav nav-tabs']//li[6]")
     public WebElement onlineStatement;
 
-    public BasePage(){
-        PageFactory.initElements(Driver.get(),this);
+    public BasePage() {
+        PageFactory.initElements(Driver.get(), this);
     }
 
-public void navigateToModule(String menu){
+    public void navigateToModule(String menu) {
 
-        switch (menu.toLowerCase()){
+        switch (menu.toLowerCase()) {
             case "account summary":
                 accountSummary.click();
                 break;
-            case"account activity":
+            case "account activity":
                 accountActivity.click();
                 break;
             case "transfer funds":
@@ -42,7 +42,7 @@ public void navigateToModule(String menu){
             case "pays bills":
                 payBills.click();
                 break;
-            case"my money map":
+            case "my money map":
                 myMoneyMap.click();
                 break;
             case "online statement":
@@ -51,6 +51,5 @@ public void navigateToModule(String menu){
         }
 
 
-}
-
+    }
 }

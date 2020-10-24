@@ -1,12 +1,13 @@
 package com.zerobank.pages;
 
+import com.zerobank.utilities.BrowserUtils;
 import com.zerobank.utilities.ConfigurationReader;
 import com.zerobank.utilities.Driver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class LoginPage {
+public class LoginPage extends BasePage {
     public LoginPage(){
         PageFactory.initElements(Driver.get(), this);
     }
@@ -30,6 +31,9 @@ public class LoginPage {
 
 
     public void loginPage(){
+        Driver.get().get(ConfigurationReader.get("url"));
+        BrowserUtils.waitFor(2);
+        new HomePage().signButton.click();
         username.sendKeys("username");
         password.sendKeys("password");
         submit.click();

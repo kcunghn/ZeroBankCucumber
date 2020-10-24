@@ -10,8 +10,8 @@ import org.junit.runner.RunWith;
         plugin = {"json:target/cucumber.json","html:target/default-html-reports"},
         features = "src/test/resources/features",
         glue = "com/zerobank/stepdefinitions",
-        dryRun = true,
-        tags = "@wip"
+        dryRun = false,
+        tags = "@abc"
 )
 public class CukesRunner {
 }
