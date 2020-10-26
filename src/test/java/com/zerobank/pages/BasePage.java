@@ -39,7 +39,7 @@ public class BasePage {
             case "transfer funds":
                 transferFunds.click();
                 break;
-            case "pays bills":
+            case "pay bills":
                 payBills.click();
                 break;
             case "my money map":

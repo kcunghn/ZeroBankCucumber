@@ -5,7 +5,7 @@ Feature: Account Activity page
 
   Scenario: Zero - Account Page Title Verification
    Then the page title should be "Zero - Account Activity"
-@wip
+
     Scenario: Account Dropdown
       And the default option of the account dropdown should be "Savings"
       And Account dropdown should have the following options
@@ -14,7 +14,14 @@ Feature: Account Activity page
       | Loan       |
       |Credit card |
       |Brokerage   |
+
   Scenario: Transactions
+    And Transactions table should have the following column names
+    | Date        |
+    | Description |
+    | Deposit     |
+    | Withdrawal  |
+
 
 
 

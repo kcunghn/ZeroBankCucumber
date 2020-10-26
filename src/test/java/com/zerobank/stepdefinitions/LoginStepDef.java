@@ -39,8 +39,8 @@ public class LoginStepDef {
     }
 
     @Then("the page title should be Zero - Account Summary")
-    public void the_page_title_should_be_Zero_Account_Summary() {
-        String expectedTitle = "Zero - Account Summary";
+    public void the_page_title_should_be_Zero_Account_Summary(String title) {
+        String expectedTitle = title;
         String actualTitle = Driver.get().getTitle();
         Assert.assertEquals(expectedTitle, actualTitle);
     }

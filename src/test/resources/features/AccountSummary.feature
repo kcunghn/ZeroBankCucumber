@@ -5,8 +5,7 @@ Feature:Account Summary Page
     Given the user is logged in
 
     Scenario:Zero - Account Summary page verification
-      Given the user enters valid username and password
-      Then the page title should be Zero - Account Summary
+      Then the page title should be "Zero - Account Summary"
 
   Scenario: Account Types
     Then the page should have the following account types
