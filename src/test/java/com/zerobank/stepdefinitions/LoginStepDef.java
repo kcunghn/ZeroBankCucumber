@@ -77,6 +77,7 @@ public class LoginStepDef {
 
     @Given("the user is logged in")
     public void theUserIsLoggedIn() {
+        Driver.get().manage().window().maximize();
         LoginPage loginPage = new LoginPage();
         loginPage.loginPage();
     }
