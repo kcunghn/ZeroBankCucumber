@@ -8,6 +8,7 @@ import io.cucumber.java.bs.A;
 import io.cucumber.java.en.*;
 import io.cucumber.java.en_old.Ac;
 import org.junit.Assert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 import java.util.List;
@@ -45,7 +46,10 @@ public class AccountActivityDef {
     @Given("Transactions table should have the following column names")
     public void transactions_table_should_have_the_following_column_names(List<String> table) {
 
-        List<String> actualTable = BrowserUtils.getElementsText(new AccountActivity().transactionTable);
+      //  List<String> actualTable = BrowserUtils.getElementsText(new AccountActivity().transactionTable);
+        List<String> actualTable = new AccountActivity().getTransactions();
+
+
 
         Assert.assertEquals(table, actualTable);
         System.out.println("actualTable = " + actualTable);

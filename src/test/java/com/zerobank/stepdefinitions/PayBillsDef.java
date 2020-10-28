@@ -56,7 +56,7 @@ public class PayBillsDef {
 
     @And("the alert message is {string}")
     public void theAlertMessageIs(String alertText) {
-
+        BrowserUtils.waitFor(2);
         String actualText = Driver.get().switchTo().alert().getText();
         System.out.println("actualText = " + actualText);
         Assert.assertEquals(alertText,actualText);

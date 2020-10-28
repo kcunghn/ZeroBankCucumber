@@ -1,5 +1,6 @@
 package com.zerobank.pages;
 
+import com.zerobank.utilities.BrowserUtils;
 import com.zerobank.utilities.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -23,7 +24,7 @@ public class AccountActivity extends BasePage {
     @FindBy(xpath = "//div[@class='controls']")
     public WebElement accountButton;
 
-    @FindBy(xpath = "//table[@class='table table-condensed table-hover']//tr//th")
+    @FindBy(xpath = "//table//thead//tr//th")
     public List<WebElement> transactionTable;
 
     @FindBy(xpath = "//a[contains(text(),'Find Transactions')]")
@@ -82,7 +83,10 @@ public class AccountActivity extends BasePage {
         }
 
     }
-
+public List<String> getTransactions(){
+    List<String> elementsText = BrowserUtils.getElementsText(Driver.get().findElements(By.xpath("//table//thead//tr//th")));
+    return elementsText;
+}
 
 
 }
