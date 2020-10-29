@@ -10,6 +10,8 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.Assert;
 import org.openqa.selenium.Alert;
 
+import java.util.Date;
+
 public class PayBillsDef {
     @When("the user select the {string}")
     public void the_user_select_the(String payOption) {
@@ -67,7 +69,10 @@ public class PayBillsDef {
     @Then("the following message shouldn't be displayed: {string}")
     public void theFollowingMessageShouldnTBeDisplayed(String expectedResult) {
         String actualMessage = new PayBills().confMessage.getText();
+        System.out.println("actualMessage = " + actualMessage);
         Assert.assertNotEquals(expectedResult,actualMessage);
+        //bug
+
 
 
     }

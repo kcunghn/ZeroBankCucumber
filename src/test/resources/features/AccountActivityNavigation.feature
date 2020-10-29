@@ -7,7 +7,7 @@ Feature: Navigating to specific accounts in Accounts Activity
       Then the user clicks on "Savings" link
       And the page title should be "Zero - Account Activity"
       And the default option of the account dropdown should be "Savings"
-@abc
+
     Scenario:
       Then the user clicks on "Brokerage" link
       And the page title should be "Zero - Account Activity"
@@ -22,7 +22,7 @@ Feature: Navigating to specific accounts in Accounts Activity
       Then the user clicks on "CreditCard" link
       And the page title should be "Zero - Account Activity"
       And the default option of the account dropdown should be "Credit Card"
-
+@smoke
     Scenario:
       Then the user clicks on "Loan" link
       And the page title should be "Zero - Account Activity"

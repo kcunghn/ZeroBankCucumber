@@ -14,7 +14,7 @@ Scenario: Making successful payment
   And the user enters the following description: "iphone payment"
   And the user clicks on Pay button
   Then the following message should be displayed: "The payment was successfully submitted."
-  @smoke
+
     Scenario:Trying to make payment without entering date
       When the user select the "Payee Options"
       And the user select the "Account Option"
